@@ -17,7 +17,7 @@ RUN apt-get update \
  && apt-get install -y --no-install-recommends supervisor x11vnc lxde xvfb wget
 
 ENV OPENOFFICE Apache_OpenOffice_4.1.1_Linux_x86-64_install-deb_en-US.tar.gz
-RUN wget -q http://downloads.sourceforge.net/project/openofficeorg.mirror/4.1.1/binaries/en-US/$OPENOFFICE -O /tmp/$OPENOFFICE
+RUN wget -q http://jaist.dl.sourceforge.net/project/openofficeorg.mirror/4.1.1/binaries/en-US/$OPENOFFICE -O /tmp/$OPENOFFICE
 RUN mkdir /tmp/OpenOffice/ \
  && tar -zxvf /tmp/$OPENOFFICE -C /tmp/OpenOffice/ \
  && dpkg -i /tmp/OpenOffice/en-US/DEBS/*.deb \
